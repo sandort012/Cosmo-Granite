@@ -1,1 +1,11 @@
-My horoscope is Twins
+codeunit 50104 Future
+{
+    local procedure Future(var Rec: Record Zodiak)
+var
+TeamMembersName: Text;
+    begin
+TeamMembersName := 'Tomi, Zoli, Gábor, Andris';
+Zodiak := 'Taurus, Twins, Cancer, Sagitarius';
+        Message('%1 your Zodiaks a follows in order: %2', TeamMembersName, Zodiak);        
+    end;
+}
