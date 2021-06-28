@@ -1,0 +1,10 @@
+codeunit 50100 Greet
+{
+    local procedure Greet(var Rec: Record Booking)
+var
+TeamMembersName: Text;
+    begin
+TeamMembersName := 'Tomi, Zoli, Gábor, Andris';
+        Message('Welcome Team Members: %1', TeamMembersName);
+    end;
+}
