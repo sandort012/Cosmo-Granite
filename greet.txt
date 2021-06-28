@@ -1,11 +1,10 @@
 codeunit 50100 Greet
 {
-    local procedure Greet(var Rec: Record Booking)
-var
-TeamMembersName: Text;
+    local procedure Greet(TeamMemberName: Text;TeamMemberAge: Integer)
+
     begin
 TeamMembersName := 'Tomi, Zoli, Gábor, Andris';
-        Message('Greetings Team Members: %1', TeamMembersName);
-        Message('Welcome Modified Team Members: %1', TeamMembersName);
+TeamMemberAge:= 18;
+        Message('Greetings Team Members: %1. Your age is: %2, TeamMembersName, TeamMemberAge);
     end;
 }
