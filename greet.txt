@@ -7,5 +7,6 @@ TeamMembersName: Text;
 TeamMembersName := 'Tomi, Zoli, Gábor, Andris';
         Message('Greetings Team Members: %1', TeamMembersName);
         Message('Welcome Modified Team Members: %1', TeamMembersName);
+        Message('New test bigyo valami');
     end;
 }
