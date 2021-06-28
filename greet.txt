@@ -5,6 +5,6 @@ var
 TeamMembersName: Text;
     begin
 TeamMembersName := 'Tomi, Zoli, Gábor, Andris';
-        Message('Welcome Team Members: %1', TeamMembersName);
+        Message('Greetings Team Members: %1', TeamMembersName);
     end;
 }
