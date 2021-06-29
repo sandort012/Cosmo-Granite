@@ -13,7 +13,7 @@
   "dependencies": [],
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "17.5.0.0",
+  "application": "17.0.0.0",
   "idRanges": [
     {
       "from": 50100,
@@ -22,5 +22,5 @@
   ],
   "contextSensitiveHelpUrl": "https://Junior-Project.com/help/",
   "showMyCode": true,
-  "runtime": "7.0"
+  "runtime": "6.3"
 }
