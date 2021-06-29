@@ -1,8 +1,0 @@
-
-private static Count() {
-<<<<<<< HEAD
-	Message('I was born in the 10th month');
-=======
-	return 2+2;
->>>>>>> 4a44b08ef94766a4d2f73036702d8dce3ecdcbc7
-}

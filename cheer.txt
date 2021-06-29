@@ -1,3 +1,0 @@
-private static Count() {
-	return 0;
-}
