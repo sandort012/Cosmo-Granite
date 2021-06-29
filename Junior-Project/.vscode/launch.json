@@ -6,7 +6,7 @@
             "request": "launch",
             "type": "al",
             "environmentType": "OnPrem",
-            "server": "https://withoutlicense",
+            "server": "http://englishcontainer",
             "serverInstance": "BC",
             "authentication": "UserPassword",
             "startupObjectId": 22,
