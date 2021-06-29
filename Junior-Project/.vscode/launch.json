@@ -6,7 +6,11 @@
             "request": "launch",
             "type": "al",
             "environmentType": "OnPrem",
+<<<<<<< HEAD
             "server": "http://EnglishContainer",
+=======
+            "server": "http://englishcontainer",
+>>>>>>> origin
             "serverInstance": "BC",
             "authentication": "UserPassword",
             "startupObjectId": 22,
