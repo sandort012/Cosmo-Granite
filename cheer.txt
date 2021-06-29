@@ -1,4 +1,0 @@
-private static Count() {
-	return 2;
-
-}
