@@ -23,7 +23,7 @@ table 50100 Macronutrients
 
         field(3; Protein; Integer)
         {
-            CaptionML = HUN = 'Feherje', ENG = 'Protein';
+            CaptionML = HUN = 'Fehérje', ENG = 'Protein';
         }
 
         field(4; Fat; Integer)
