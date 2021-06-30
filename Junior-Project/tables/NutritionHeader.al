@@ -88,6 +88,18 @@ table 50101 NutritionHeader
         {
             DataClassification = ToBeClassified;
         }
+
+        field(17; "Sell-to Contact No."; Code[20])
+        {
+            Caption = 'Sell-to Contact No.';
+            TableRelation = Contact;
+        }
+
+        field(18; "Sell-to Contact"; Text[100])
+        {
+            Caption = 'Sell-to Contact';
+            //LookupContact("Sell-to Customer No.", "Sell-to Contact No.", Contact); 
+        }
     }
 
     keys

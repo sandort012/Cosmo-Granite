@@ -6,6 +6,7 @@ page 50102 NutritionOrderList
     SourceTable = NutritionHeader;
     RefreshOnActivate = true;
     Caption = 'Nutrition Order List';
+    CardPageId = NutritionOrderDocument;
     Editable = false;
 
     layout
@@ -17,7 +18,6 @@ page 50102 NutritionOrderList
                 field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
-
                 }
 
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
