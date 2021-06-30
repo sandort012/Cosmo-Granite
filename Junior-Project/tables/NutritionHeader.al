@@ -13,8 +13,22 @@ table 50101 NutritionHeader
 
         field(2; "No."; Code[20])
         {
-            Caption = 'No.';
+            DataClassification = ToBeClassified;
+        }
 
+        field(19; "No. Series"; Code[20])
+        {
+            DataClassification = ToBeClassified;
+            TableRelation = "No. Series".Code WHERE(Code = const('TAP'));
+
+            trigger OnValidate();
+            var
+                NoSeriesMgt: Codeunit NoSeriesManagement;
+            begin
+                if "No. Series" <> xRec."No. Series" then begin
+                    "No." := NoSeriesMgt.GetNextNo('TAP', WorkDate(), TRUE); //TAP-00011
+                end;
+            end;
         }
 
         field(3; "Sell-to Customer No."; Code[20])
@@ -23,11 +37,21 @@ table 50101 NutritionHeader
             TableRelation = Customer;
             CaptionMl = HUN = 'Ügyfélszám', ENG = 'Customer No.';
 
-            trigger OnValidate()
+            /*trigger OnValidate()
             var
                 CustomerRecord: Record Customer;
             begin
                 if CustomerRecord.Get(Rec."Sell-to Customer No.") then begin
+                    "Customer Name" := CustomerRecord.Name;
+                end;
+            end;*/
+
+            trigger OnLookup()
+            var
+                CustomerRecord: Record Customer;
+            begin
+                if Page.RunModal(Page::"Customer List", CustomerRecord) = Action::LookupOK then begin
+                    "Sell-to Customer No." := CustomerRecord."No.";
                     "Customer Name" := CustomerRecord.Name;
                 end;
             end;
@@ -82,6 +106,7 @@ table 50101 NutritionHeader
             TableRelation = Contact;
             ValidateTableRelation = false;
 
+
             trigger OnValidate()
             var
                 Contactrecord: Record Contact;
@@ -101,7 +126,7 @@ table 50101 NutritionHeader
 
     keys
     {
-        key(Key1; "No.")
+        key(PK; "No.")
         {
             Clustered = true;
         }
@@ -109,12 +134,11 @@ table 50101 NutritionHeader
 
     trigger OnInsert()
     begin
-
+        Validate("No. Series");
     end;
 
     trigger OnModify()
     begin
-        Validate("Sell-to Contact No.");
     end;
 
     trigger OnDelete()
@@ -126,5 +150,4 @@ table 50101 NutritionHeader
     begin
 
     end;
-
 }
