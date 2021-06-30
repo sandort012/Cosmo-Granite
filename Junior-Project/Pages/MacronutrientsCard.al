@@ -1,8 +1,8 @@
 page 50101 MacronutrientsCard
 {
-    PageType = Card;
+    PageType = Document;
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = Lists;
     SourceTable = Macronutrients;
     DelayedInsert = true;
     CaptionML = HUN = 'Makro tápanyag Kártya', ENG = 'Macro Units Card';

@@ -2,7 +2,7 @@ page 50100 MacronutrientsList
 {
     PageType = List;
     ApplicationArea = All;
-    UsageCategory = Administration;
+    UsageCategory = Lists;
     SourceTable = Macronutrients;
     CardPageId = MacronutrientsCard;
     Editable = false;

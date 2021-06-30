@@ -9,7 +9,7 @@
             "server": "http://englishcontainer",
             "serverInstance": "BC",
             "authentication": "UserPassword",
-            "startupObjectId": 22,
+            "startupObjectId": 50102,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,

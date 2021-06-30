@@ -1,4 +1,4 @@
-table 50100 Macronutrients
+table 50100 MacroNutrients
 {
     DataClassification = ToBeClassified;
     CaptionML = HUN = 'Makro tápanyag', ENG = 'Macro Units';

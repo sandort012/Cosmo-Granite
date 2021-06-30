@@ -1,10 +1,12 @@
-page 50102 NutritionOrder
+page 50102 NutritionOrderList
 {
     PageType = List;
+    ApplicationArea = All;
+    UsageCategory = Lists;
     SourceTable = NutritionHeader;
     RefreshOnActivate = true;
-    Caption = 'Nutrition Order';
-
+    Caption = 'Nutrition Order List';
+    Editable = false;
 
     layout
     {
@@ -12,53 +14,64 @@ page 50102 NutritionOrder
         {
             repeater(GroupName)
             {
-                field(No; Rec."No")
+                field("No."; Rec."No.")
                 {
                     ApplicationArea = All;
 
                 }
 
-                field("Customer Name"; Rec."Customer Name")
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
                     ApplicationArea = All;
-
                 }
 
-                field(PostingDate; Rec.PostingDate)
+                field("Sell-to Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = All;
-
                 }
 
-                field(OrderDate; Rec.OrderDate)
+                // Location Code
+
+                field("Document Date"; Rec.DocumentDate)
                 {
                     ApplicationArea = All;
-
-                }
-
-                field(DueDate; Rec.DueDate)
-                {
-                    ApplicationArea = All;
-
-                }
-
-                field(RequestedDeliveryDate; Rec.RequestedDeliveryDate)
-                {
-                    ApplicationArea = All;
-
                 }
 
                 field(Status; Rec.Status)
                 {
                     ApplicationArea = All;
+                }
 
+                field("Completely Shipped"; Rec.CompletelyShipped)
+                {
+                    ApplicationArea = All;
+                }
+
+                field(AmountShippedNotInvoiced; Rec.AmountShippedNotInvoiced)
+                {
+                    ApplicationArea = All;
+                }
+
+                field(AmtShippedNotInvoicedInclVAT; Rec.AmtShippedNotInvoicedInclVAT)
+                {
+                    ApplicationArea = All;
+                }
+
+                field(Amount; Rec.Amount)
+                {
+                    ApplicationArea = All;
+                }
+
+                field(AmountInclVAT; Rec.AmountInclVAT)
+                {
+                    ApplicationArea = All;
                 }
 
             }
         }
         area(Factboxes)
         {
-
+            // TODO
         }
     }
 

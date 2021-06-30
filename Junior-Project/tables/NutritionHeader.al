@@ -10,24 +10,18 @@ table 50101 NutritionHeader
         {
             Caption = 'Document Type';
         }
-        field(2; "Sell-to Customer No."; Code[20])
+
+        field(2; "No."; Code[20])
+        {
+            Caption = 'No.';
+
+        }
+
+        field(3; "Sell-to Customer No."; Code[20])
         {
             DataClassification = ToBeClassified;
             TableRelation = Customer;
             CaptionMl = HUN = 'TODO', ENG = 'Sell-to Customer No.';
-
-        }
-
-        field(3; "No."; Code[20])
-        {
-            Caption = 'No.';
-
-        }
-
-        field(4; "No"; Code[20])
-        {
-            Caption = 'No.';
-            TableRelation = "No. Series";
 
         }
 
@@ -59,12 +53,41 @@ table 50101 NutritionHeader
             DataClassification = ToBeClassified;
         }
 
-        field(120; Status; Enum "Sales Document Status")
+        field(10; Status; Enum "Sales Document Status")
         {
             Caption = 'Status';
             Editable = false;
         }
 
+        field(11; DocumentDate; Date)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(12; CompletelyShipped; Boolean)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(13; AmountShippedNotInvoiced; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(14; AmtShippedNotInvoicedInclVAT; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(15; Amount; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
+
+        field(16; AmountInclVAT; Decimal)
+        {
+            DataClassification = ToBeClassified;
+        }
     }
 
     keys
@@ -74,9 +97,6 @@ table 50101 NutritionHeader
             Clustered = true;
         }
     }
-
-    var
-        myInt: Integer;
 
     trigger OnInsert()
     begin
