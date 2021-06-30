@@ -21,16 +21,22 @@ table 50101 NutritionHeader
         {
             DataClassification = ToBeClassified;
             TableRelation = Customer;
-            CaptionMl = HUN = 'TODO', ENG = 'Sell-to Customer No.';
+            CaptionMl = HUN = 'Ügyfélszám', ENG = 'Customer No.';
 
+            trigger OnValidate()
+            var
+                CustomerRecord: Record Customer;
+            begin
+                if CustomerRecord.Get(Rec."Sell-to Customer No.") then begin
+                    "Customer Name" := CustomerRecord.Name;
+                end;
+            end;
         }
 
         field(5; "Customer Name"; Text[100])
         {
             DataClassification = ToBeClassified;
-            TableRelation = Customer.Name;
-            CaptionMl = HUN = 'Vevo neve', ENG = 'Customer Name';
-
+            CaptionMl = HUN = 'Vevő neve', ENG = 'Customer Name';
         }
 
         field(6; PostingDate; Date)
@@ -74,19 +80,28 @@ table 50101 NutritionHeader
             DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact No.';
             TableRelation = Contact;
+            ValidateTableRelation = false;
+
+            trigger OnValidate()
+            var
+                Contactrecord: Record Contact;
+            begin
+                if Contactrecord.Get(Rec."Sell-to Contact No.") then begin
+                    "Sell-to Contact" := Contactrecord.Name;
+                end;
+            end;
         }
 
         field(18; "Sell-to Contact"; Text[100])
         {
             DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact';
-            //LookupContact("Sell-to Customer No.", "Sell-to Contact No.", Contact); 
         }
     }
 
     keys
     {
-        key(Key1; "Document Type", "No.")
+        key(Key1; "No.")
         {
             Clustered = true;
         }
@@ -99,7 +114,7 @@ table 50101 NutritionHeader
 
     trigger OnModify()
     begin
-
+        Validate("Sell-to Contact No.");
     end;
 
     trigger OnDelete()

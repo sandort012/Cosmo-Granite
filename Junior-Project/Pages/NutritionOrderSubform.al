@@ -8,6 +8,7 @@ page 50104 NutritionOrderSubForm
     DelayedInsert = true;
     MultipleNewLines = true;
     LinksAllowed = false;
+    Editable = true;
 
     layout
     {

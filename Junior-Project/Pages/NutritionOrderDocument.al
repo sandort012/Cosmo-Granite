@@ -11,16 +11,28 @@ page 50103 NutritionOrderDocument
         {
             group(General)
             {
+                field("Sell-to Customer No."; Rec."Sell-to Customer No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Customer No.';
+                }
+
                 field("Customer Name"; Rec."Customer Name")
                 {
                     ApplicationArea = All;
                     Caption = 'Customer Name';
                 }
 
+                field("Sell-to Contact No."; Rec."Sell-to Contact No.")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Contact No.';
+                }
+
                 field("Sell-to Contact"; Rec."Sell-to Contact")
                 {
                     ApplicationArea = All;
-                    Caption = 'Contact';
+                    Caption = 'Contact Name';
                 }
 
                 field(PostingDate; Rec.PostingDate)
