@@ -46,27 +46,6 @@ page 50102 NutritionOrderList
                 {
                     ApplicationArea = All;
                 }
-
-                field(AmountShippedNotInvoiced; Rec.AmountShippedNotInvoiced)
-                {
-                    ApplicationArea = All;
-                }
-
-                field(AmtShippedNotInvoicedInclVAT; Rec.AmtShippedNotInvoicedInclVAT)
-                {
-                    ApplicationArea = All;
-                }
-
-                field(Amount; Rec.Amount)
-                {
-                    ApplicationArea = All;
-                }
-
-                field(AmountInclVAT; Rec.AmountInclVAT)
-                {
-                    ApplicationArea = All;
-                }
-
             }
         }
         area(Factboxes)

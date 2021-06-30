@@ -52,6 +52,18 @@ page 50103 NutritionOrderDocument
                     ApplicationArea = All;
                 }
             }
+
+            group("Nutrition Line")
+            {
+                part(NutritionOrderSubForm; NutritionOrderSubForm)
+                {
+                    ApplicationArea = Basic, Suite;
+                    Editable = true;
+                    Enabled = Rec."Sell-to Customer No." <> '';
+                    SubPageLink = "Document No." = FIELD("No.");
+                    UpdatePropagation = Both;
+                }
+            }
         }
     }
 }

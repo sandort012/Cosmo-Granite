@@ -55,7 +55,7 @@ table 50101 NutritionHeader
 
         field(10; Status; Enum "Sales Document Status")
         {
-            Caption = 'Status';
+            DataClassification = ToBeClassified;
             Editable = false;
         }
 
@@ -69,34 +69,16 @@ table 50101 NutritionHeader
             DataClassification = ToBeClassified;
         }
 
-        field(13; AmountShippedNotInvoiced; Decimal)
-        {
-            DataClassification = ToBeClassified;
-        }
-
-        field(14; AmtShippedNotInvoicedInclVAT; Decimal)
-        {
-            DataClassification = ToBeClassified;
-        }
-
-        field(15; Amount; Decimal)
-        {
-            DataClassification = ToBeClassified;
-        }
-
-        field(16; AmountInclVAT; Decimal)
-        {
-            DataClassification = ToBeClassified;
-        }
-
         field(17; "Sell-to Contact No."; Code[20])
         {
+            DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact No.';
             TableRelation = Contact;
         }
 
         field(18; "Sell-to Contact"; Text[100])
         {
+            DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact';
             //LookupContact("Sell-to Customer No.", "Sell-to Contact No.", Contact); 
         }
