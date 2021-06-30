@@ -1,6 +1,7 @@
 {
     "version": "0.2.0",
     "configurations": [
+        
         {
             "name": "Your own server",
             "request": "launch",
@@ -9,7 +10,7 @@
             "server": "http://EnglishContainer",
             "serverInstance": "BC",
             "authentication": "UserPassword",
-            "startupObjectId": 22,
+            "startupObjectId": 50102,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,
