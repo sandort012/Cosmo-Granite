@@ -32,6 +32,13 @@ page 50104 NutritionOrderSubForm
                     ApplicationArea = All;
                 }
 
+                field("Unit of Measure"; Rec."Unit of Measure")
+                {
+                    ApplicationArea = All;
+                }
+            }
+            group(Details)
+            {
                 field(Protein; Rec.Protein)
                 {
                     ApplicationArea = All;
@@ -43,11 +50,6 @@ page 50104 NutritionOrderSubForm
                 }
 
                 field(CarboHydrate; Rec.CarboHydrate)
-                {
-                    ApplicationArea = All;
-                }
-
-                field("Unit of Measure"; Rec."Unit of Measure")
                 {
                     ApplicationArea = All;
                 }
@@ -68,15 +70,12 @@ page 50104 NutritionOrderSubForm
     {
         area(Processing)
         {
-            action(ActionName)
+            action("Macronutrient List")
             {
                 ApplicationArea = All;
-
-                trigger OnAction()
-                begin
-
-                end;
+                RunObject = page MacronutrientsList;
             }
         }
+
     }
 }

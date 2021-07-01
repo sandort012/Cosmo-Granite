@@ -68,5 +68,14 @@ page 50102 NutritionOrderList
                 end;
             }
         }
+        area(Navigation)
+        {
+            action("Macronutrient List")
+            {
+                ApplicationArea = All;
+                RunObject = page MacronutrientsList;
+
+            }
+        }
     }
 }
