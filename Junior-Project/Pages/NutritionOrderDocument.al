@@ -4,6 +4,7 @@ page 50103 NutritionOrderDocument
     ApplicationArea = All;
     UsageCategory = Documents;
     SourceTable = NutritionHeader;
+    DelayedInsert = true;
 
     layout
     {
@@ -11,6 +12,10 @@ page 50103 NutritionOrderDocument
         {
             group(General)
             {
+                field("No."; Rec."No. Series")
+                {
+                    ApplicationArea = All;
+                }
                 field("Sell-to Customer No."; Rec."Sell-to Customer No.")
                 {
                     ApplicationArea = All;
