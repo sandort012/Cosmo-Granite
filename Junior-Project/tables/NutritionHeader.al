@@ -134,7 +134,7 @@ table 50101 NutritionHeader
 
     trigger OnInsert()
     begin
-        Validate("No. Series");
+        // Validate("No. Series");
     end;
 
     trigger OnModify()

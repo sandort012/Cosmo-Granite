@@ -6,7 +6,7 @@ page 50104 NutritionOrderSubForm
     SourceTable = NutritionLine;
     AutoSplitKey = true;
     DelayedInsert = true;
-    MultipleNewLines = true;
+    //MultipleNewLines = true;
     LinksAllowed = false;
     Editable = true;
 
