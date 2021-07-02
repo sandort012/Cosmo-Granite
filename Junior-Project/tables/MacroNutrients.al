@@ -44,12 +44,12 @@ table 50100 MacroNutrients
 
         field(7; KJ; Integer)
         {
-            CaptionML = HUN = 'KJ', ENG = 'KJ';
+            //CaptionML = HUN = 'KJ', ENG = 'KJ';
         }
 
         field(8; Kcal; Integer)
         {
-            CaptionML = HUN = 'Kcal', ENG = 'Kcal';
+            //CaptionML = HUN = 'Kcal', ENG = 'Kcal';
         }
 
     }

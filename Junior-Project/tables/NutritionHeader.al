@@ -8,7 +8,7 @@ table 50101 NutritionHeader
 
         field(1; "Document Type"; Enum "Sales Document Type")
         {
-            Caption = 'Document Type';
+            //Caption = 'Document Type';
         }
 
         field(2; "No."; Code[20])
@@ -63,7 +63,7 @@ table 50101 NutritionHeader
             CaptionMl = HUN = 'Vevő neve', ENG = 'Customer Name';
         }
 
-        field(6; PostingDate; Date)
+        /*field(6; PostingDate; Date)
         {
             DataClassification = ToBeClassified;
         }
@@ -71,17 +71,17 @@ table 50101 NutritionHeader
         field(7; OrderDate; Date)
         {
             DataClassification = ToBeClassified;
-        }
+        }*/
 
         field(8; DueDate; Date)
         {
             DataClassification = ToBeClassified;
         }
 
-        field(9; RequestedDeliveryDate; Date)
-        {
-            DataClassification = ToBeClassified;
-        }
+        /* field(9; RequestedDeliveryDate; Date)
+         {
+             DataClassification = ToBeClassified;
+         }*/
 
         field(10; Status; Enum "Sales Document Status")
         {
@@ -99,7 +99,7 @@ table 50101 NutritionHeader
             DataClassification = ToBeClassified;
         }
 
-        field(17; "Sell-to Contact No."; Code[20])
+        /*field(17; "Sell-to Contact No."; Code[20])
         {
             DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact No.';
@@ -121,7 +121,7 @@ table 50101 NutritionHeader
         {
             DataClassification = ToBeClassified;
             Caption = 'Sell-to Contact';
-        }
+        }*/
     }
 
     keys

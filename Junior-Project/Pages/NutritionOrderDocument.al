@@ -28,29 +28,29 @@ page 50103 NutritionOrderDocument
                     Caption = 'Customer Name';
                 }
 
-                field("Sell-to Contact No."; Rec."Sell-to Contact No.")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Contact No.';
-                }
+                /* field("Sell-to Contact No."; Rec."Sell-to Contact No.")
+                 {
+                     ApplicationArea = All;
+                     Caption = 'Contact No.';
+                 }
 
-                field("Sell-to Contact"; Rec."Sell-to Contact")
-                {
-                    ApplicationArea = All;
-                    Caption = 'Contact Name';
-                }
+                 field("Sell-to Contact"; Rec."Sell-to Contact")
+                 {
+                     ApplicationArea = All;
+                     Caption = 'Contact Name';
+                 }
 
-                field(PostingDate; Rec.PostingDate)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Posting Date';
-                }
+                 field(PostingDate; Rec.PostingDate)
+                 {
+                     ApplicationArea = All;
+                     Caption = 'Posting Date';
+                 }
 
-                field(OrderDate; Rec.OrderDate)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Order Date';
-                }
+                 field(OrderDate; Rec.OrderDate)
+                 {
+                     ApplicationArea = All;
+                     Caption = 'Order Date';
+                 }*/
 
                 field(DueDate; Rec.DueDate)
                 {
@@ -58,11 +58,11 @@ page 50103 NutritionOrderDocument
                     Caption = 'Due Date';
                 }
 
-                field(RequestedDeliveryDate; Rec.RequestedDeliveryDate)
-                {
-                    ApplicationArea = All;
-                    Caption = 'Requested Delivery Date';
-                }
+                /* field(RequestedDeliveryDate; Rec.RequestedDeliveryDate)
+                 {
+                     ApplicationArea = All;
+                     Caption = 'Requested Delivery Date';
+                 }*/
 
                 field(Status; Rec.Status)
                 {
